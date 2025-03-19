@@ -2,18 +2,21 @@
 
 ## Problem
 
-**Definition (topological sort)**
-A topological sort is a linear ordering of the vertices in a directed graph where for each directed edge from a vertex $u$ to vertex $v$, $u$ appears before $v$.
+> #### Definition (topological sort)
+>  A topological sort is a linear ordering of the vertices in a directed graph where for each directed edge from a vertex $u$ to vertex $v$, $u$ appears before $v$.
 
-![500](images/Pasted%20image%2020250303024845.png)
+<img src="images/Pasted%20image%2020250303024845.png" width="400">
 
-**Description**
+### Description
+
 Given a directed acyclic graph, return the topological sort of the graph.
 
-**Input**
+### Input
+
 A directed acyclic graph, `dag`
 
-**Output**
+### Output
+
 The topological sort of `dag`
 
 ## Kahn's algorithm
@@ -24,4 +27,4 @@ The topological sort of `dag`
 
 **Space complexity**
 
-## Singly linked-list and depth-first search
+## Depth-first search based topological sorting algorithm
