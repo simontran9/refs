@@ -9,7 +9,7 @@
 | `func successor(key: K) -> K`   | Finds the key that immediately follows the given key.  |
 | `func predecessor(key: K) -> K` | Finds the key that immediately precedes the given key. |
 
-## AVL tree
+## AVL tree container
 
 ### Computational complexity
 
@@ -25,7 +25,7 @@
 
 Worst-case: $O(n)$
 
-## Red-black tree
+## Red-black tree container
 
 ### Overview
 
@@ -94,7 +94,7 @@ Re-colour `z` to black
 
 TO DO
 
-## In-memory B-Tree
+## In-memory B-Tree container
 
 ### Overview
 
