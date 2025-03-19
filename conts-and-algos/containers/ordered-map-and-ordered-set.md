@@ -188,6 +188,6 @@ TO DO
 
 TO DO
 
-## Splay tree
+## Splay tree container
 
 TO DO
