@@ -2,22 +2,22 @@
 
 ## Problem
 
-#### Description
+### Description
 
 Given an array of elements, `array`, sort it in non-decreasing order.
 
-#### Input
+### Input
 
 An array of elements, `array`.
 
-#### Output
+### Output
 
 - If the sorting is in-place, return nothing, but rather, the original array should be modified so that its elements are sorted in non-decreasing order.
 - If the sorting is not in-place, return a new array that is a sorted version of original array, leaving the original unchanged.
 
 ## Bubble sort
 
-#### Idea
+### Idea
 
 1. Begin at the first element
 2. Continuously swap two adjacent elements so the smaller element is before the larger element
@@ -25,82 +25,86 @@ An array of elements, `array`.
 
 <img src="images/Pasted%20image%2020250303030750.png" width="500">
 
-#### Worst-case time complexity 
+### Computational complexity
 
-$O(n^2)$
+#### Time complexity 
 
-#### Worst-case space complexity
+Worst-case: $O(n^2)$
 
-$O(1)$
+#### Space complexity
 
-#### Properties
+Worst-case: $O(1)$
+
+### Properties
 
 - Stable
 - In-place
 
-#### Pseudocode
+### Pseudocode
 
 ```
 func bubble_sort(array: Array[Int]) {
-	var swapped: Bool = False;
-	for i in 0..(array.len() - 1) {
-	    for j in 0..(array.len() - i - 1) {
-		    if array[j] > array[j + 1] {
-		        array.swap(j, j + 1);
-		        swapped = True;
-		    }
-	    }
-	    if !swapped { 
-		    break; 
-	    }
-	}
+    var swapped: Bool = False;
+    for i in 0..(array.len() - 1) {
+        for j in 0..(array.len() - i - 1) {
+            if array[j] > array[j + 1] {
+                array.swap(j, j + 1);
+                swapped = True;
+            }
+        }
+        if !swapped {
+            break; 
+        }
+    }
 }
 ```
 
 ## Selection sort
 
-#### Idea
+### Idea
 
 1. Go through the array to find the smallest element
 2. Move the smallest element to the front of the unsorted portion of the array
 3. Repeat step 1 and step 2 until the array is completely sorted
 
-<img src="Pasted%20image%2020250226031346.png" width="500">
+<img src="images/Pasted%20image%2020250226031346.png" width="300">
 
-#### Worst-case time complexity
+### Computational complexity
 
-$O(n^2)$
+#### Time complexity 
 
-#### Worst-case space complexity
+Worst-case: $O(n^2)$
 
-$O(1)$
+#### Space complexity
 
-#### Properties
+Worst-case: $O(1)$
+
+### Properties
 
 - Not stable
 - In-place
 
-#### Pseudocode
+### Pseudocode
 
 ```
 func selection_sort(array: Array[Int]) {
-	for i in 0..(array.len() - 1) {
-		var min_index: Int = i;
-		for j in (i + 1)..array.len() {
-			if array[j] < array[min_index] {
-				min = j;
-			}
-		}
-		if min_index != i {
-			array.swap(min_index, i);
-		}
-	}
+    for i in 0..(array.len() - 1) {
+        var min_index: Int = i;
+        for j in (i + 1)..array.len() {
+            if array[j] < array[min_index] {
+                min_index = j;
+            }
+        }
+        if min_index != i {
+            array.swap(min_index, i);
+        }
+    }
 }
 ```
 
 ## Insertion sort
 
-#### Idea
+### Idea
 
 1. Start with the second element
 2. Compare the current element with the previous elements in the sorted portion and insert it into the correct position in the sorted portion
@@ -109,38 +113,40 @@ func selection_sort(array: Array[Int]) {
 
 <img src="images/Pasted%20image%2020250226022041.png" width="500">
 
-#### Worst-case time complexity
+### Computational complexity
 
-$O(n^2)$ 
+#### Time complexity 
 
-#### Worst-case space complexity
+Worst-case: $O(n^2)$
 
-$O(1)$
+#### Space complexity
 
-#### Properties
+Worst-case: $O(1)$
+
+### Properties
 
 - Stable
 - In-place
 
-#### Pseudocode
+### Pseudocode
 
 ```
 func insertion_sort(array: Array[Int]) {
-	for i in 1..array.len() {
-		const current: Int = array[i];
-		var j: Int = i - 1;
-		while j >= 0 and array[j] > current {
-			array[j + 1] = array[j];
-			j -= 1;
-		}
-		array[j + 1] = current;
-	}
+    for i in 1..array.len() {
+        const current: Int = array[i];
+        var j: Int = i - 1;
+        while j >= 0 and array[j] > current {
+            array[j + 1] = array[j];
+            j -= 1;
+        }
+        array[j + 1] = current;
+    }
 }
 ```
 
 ## Merge sort
 
-#### Idea
+### Idea
 
 1. Repeatedly split the array in half until you have subarrays containing single elements (these are inherently sorted)
 2. Merge adjacent subarrays in a way that maintains sorted order, comparing elements from each subarray
@@ -148,63 +154,65 @@ func insertion_sort(array: Array[Int]) {
 
 <img src="images/Pasted%20image%2020250303032958.png" width="300">
 
-#### Worst-case time complexity
+### Computational complexity
 
-$O(n \log n)$ 
+#### Time complexity 
 
-#### Worst-case space complexity
+Worst-case: $O(n \log n)$
 
-$O(n)$
+#### Space complexity
 
-#### Properties
+Worst-case: $O(1)$
+
+### Properties
 
 - Stable
 - Not in-place
 
-#### Pseudocode
+### Pseudocode
 
 ```
 func merge_sort(array: Array[Int]) -> Array[Int] {
-	if array.len() <= 1 { 
-		return array; 
-	}
+    if array.len() <= 1 { 
+        return array; 
+    }
 
-	const mid: Int = array.len() / 2;
-	left: Array[Int] = array[0..mid];
-	right: Array[Int] = array[mid..array.len()];
+    const mid: Int = array.len() / 2;
+    left: Array[Int] = array[0..mid];
+    right: Array[Int] = array[mid..array.len()];
 
-	left = merge_sort(left);
-	right = merge_sort(right);
+    left = merge_sort(left);
+    right = merge_sort(right);
 
-	return merge(left, right);
+    return merge(left, right);
 }
 
 func merge(left: Array[Int], right: Array[Int]) -> Array[Int] {
-	var left_index: Int = 0;
-	var right_index: Int = 0;
-	var merged: ArrayList[Int] = ArrayList[Int]::new();
+    var left_index: Int = 0;
+    var right_index: Int = 0;
+    var merged: ArrayList[Int] = ArrayList[Int]::new();
 
-	while left_index < left.len() and right_index < right.len() {
-		if left[left_index] < right[right_index] {
-			merged.add_last(left[left_index]);
-			left_index += 1;
-		} else {
-			merged.add_last(right[right_index]);
-			right_index += 1;
-		}
-	}
+    while left_index < left.len() and right_index < right.len() {
+        if left[left_index] < right[right_index] {
+            merged.add_last(left[left_index]);
+            left_index += 1;
+        } else {
+            merged.add_last(right[right_index]);
+            right_index += 1;
+        }
+    }
 
-	while left_index < left.len() {
-	    merged.add_last(left[left_index]);
-	    left_index += 1;
-	}
-	
-	while right_index < right.len() {
-	    merged.add_last(right[right_index]);
-	    right_index += 1;
-	}
+    while left_index < left.len() {
+        merged.add_last(left[left_index]);
+        left_index += 1;
+    }
+    
+    while right_index < right.len() {
+        merged.add_last(right[right_index]);
+        right_index += 1;
+    }
 
-	return merged;
+    return merged;
 }
 ```
 
@@ -264,15 +272,19 @@ func merge(left: Array[Int], right: Array[Int]) -> Array[Int] {
 > [!note]
 > Lomuto's partition scheme will place the pivot as the last element, while Hoare's partition scheme will place the pivot as the first element
 
-#### Worst-case time complexity
+### Computational complexity
 
-$O(n^2)$ (but average-case $O(n \log n)$)
+#### Time complexity 
 
-#### Worst-case space complexity
+- Worst-case: $O(n^2)$
+- Average-case: $O(n \log n)$
 
-$O(n)$ (but average-case $O(\log n)$)
+#### Space complexity
 
-#### Properties
+- Worst-case: $O(n^2)$
+- Average-case: $O(n \log n)$
+
+### Properties
 
 - Not stable
 - In-place
@@ -285,34 +297,34 @@ $O(n)$ (but average-case $O(\log n)$)
 import random;
 
 func quick_sort(array: Array[Int], low: Int, high: Int) {
-	if low <= high { 
-		const pi: Int = lomuto_partition(array, low, high);
-		quick_sort(array, low, pi - 1);
-		quick_sort(array, pi + 1, high);
-	}
+    if low < high { 
+        const pi: Int = lomuto_partition(array, low, high);
+        quick_sort(array, low, pi - 1);
+        quick_sort(array, pi + 1, high);
+    }
 }
 
 func lomuto_partition(array: Array[Int], low: Int, high: Int) -> Int {
-	const pivot: Int = lomuto_pivot_selection(array, low, high);
+    const pivot: Int = lomuto_pivot_selection(array, low, high);
 
-	var i: Int = low - 1;
+    var i: Int = low - 1;
 
-	for j in low..high {
-		if array[j] <= pivot {
-		    i += 1;
-		    array.swap(i, j);
-		}
-	}
+    for j in low..high {
+        if array[j] <= pivot {
+            i += 1;
+            array.swap(i, j);
+        }
+    }
 
-	array.swap(i + 1, high);
+    array.swap(i + 1, high);
 
-	return i + 1;
+    return i + 1;
 }
 
-func lomuto_pivot_selection(array: Array[Int], low: Int high: Int) -> Int {
-	const i: Int = low + random::int(0, high - low + 1);
-	array.swap(i, high);
-	return array[high];
+func lomuto_pivot_selection(array: Array[Int], low: Int, high: Int) -> Int {
+    const i: Int = low + random::int(0, high - low + 1);
+    array.swap(i, high);
+    return array[high];
 }
 ```
 
@@ -322,12 +334,12 @@ func lomuto_pivot_selection(array: Array[Int], low: Int high: Int) -> Int {
 import random;
 
 func quick_sort(array: Array[Int], low: Int, high: Int) {
-	if low >= high {
-		return;
-	}
-	const pi: Int = hoare_partition(array, low, high);
-	quick_sort(array, low, pi);
-	quick_sort(array, pi + 1, high);
+    if low >= high {
+        return;
+    }
+    const pi: Int = hoare_partition(array, low, high);
+    quick_sort(array, low, pi);
+    quick_sort(array, pi + 1, high);
 }
 
 func hoare_partition(array: Array[Int], low: Int, high: Int) -> Int {
@@ -363,7 +375,7 @@ func hoare_pivot_selection(array: Array[Int], low: Int, high: Int) -> Int {
 
 ## Heap sort
 
-#### Idea
+### Idea
 
 1. Build a max heap from the input array
 2. Select the last slot from the unsorted portion of the array
@@ -371,32 +383,34 @@ func hoare_pivot_selection(array: Array[Int], low: Int, high: Int) -> Int {
 4. Remove the top element from the heap
 5. Repeat step 2 and step 4 until the array is completely sorted
 
-<img src="Pasted%20image%2020250226053913.png" width="300">
-<img src="Pasted%20image%2020250226054010.png" width="300">
-<img src="Pasted%20image%2020250226054025.png" width="300">
-<img src="Pasted%20image%2020250226054034.png" width="300">
-<img src="Pasted%20image%2020250226054047.png" width="300">
+<img src="images/Pasted%20image%2020250226053913.png" width="300">
+<img src="images/Pasted%20image%2020250226054010.png" width="300">
+<img src="images/Pasted%20image%2020250226054025.png" width="300">
+<img src="images/Pasted%20image%2020250226054034.png" width="300">
+<img src="images/Pasted%20image%2020250226054047.png" width="300">
 
-#### Worst-case time complexity
+### Computational complexity 
 
-$O(n \log n)$
+#### Time complexity
 
-#### Worst-case space complexity
+Worst-case: $O(n \log n)$
 
-$O(1)$
+#### Space complexity
 
-#### Properties
+Worst-case: $O(1)$
+
+### Properties
 
 - Not stable
 - In-place
 
-#### Pseudocode
+### Pseudocode
 
 ```
 func heap_priority_queue_sort(array: Array[Int]) {
-	var pq: MaxHeapPriorityQueue[Int] = MaxHeapPriorityQueue[Int]::from(array);
-	for i in (0..pq.len()).rev() {
-		array[i] = pq.remove_top();
-	}
+    var pq: MaxHeapPriorityQueue[Int] = MaxHeapPriorityQueue[Int]::from(array);
+    for i in (0..pq.len()).rev() {
+        array[i] = pq.remove_top();
+    }
 }
 ```
