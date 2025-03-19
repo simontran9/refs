@@ -76,9 +76,9 @@ To build a heap from initial elements of a list in $O(n)$ worst case, we build i
 1. Copy over all elements in the original list into the backing array
 2. Beginning at the parent of the last element in the backing array, and repeatedly call the heapify down method
 
-### Search
+### Retrieval
 
-Typically, binary heaps are used as containers for priority queues. This means that we'll typically search for the topmost element in the heap i.e. the root node. As such, we simply return the element at index of the root node: index $1$. For any other elements, we have to perform a linear search.
+Typically, binary heaps are used as containers for priority queues. This means that we'll typically retrieve only the topmost element in the heap i.e. the root node. As such, we simply return the element at index of the root node: index $1$. For any other elements, we have to perform a linear search.
 
 ### Insertion
 
