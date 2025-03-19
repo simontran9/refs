@@ -7,7 +7,7 @@
 | Operation           | Description                                                                  |
 | ------------------------ | -------------------------------------------------------------------------------- |
 | `func top() -> E`        | Returns the element with the top priority without removing it.                   |
-| `func add(element: E)`   | Adds an element to the priority queue.                                           |
+| `func add(e: E)`   | Adds an element to the priority queue.                                           |
 | `func remove_top() -> E` | Removes and returns the element with the highest priority in the priority queue. |
 
 ### Adaptable priority queue
