@@ -23,7 +23,7 @@ An array of elements, `array`.
 2. Continuously swap two adjacent elements so the smaller element is before the larger element
 3. Repeat step 1 to step 2 until the array is completely sorted
 
-<img src="images/Pasted%20image%2020250303030750.png" width="300">
+<img src="images/Pasted%20image%2020250303030750.png" width="500">
 
 #### Worst-case time complexity 
 
@@ -65,7 +65,7 @@ func bubble_sort(array: Array[Int]) {
 2. Move the smallest element to the front of the unsorted portion of the array
 3. Repeat step 1 and step 2 until the array is completely sorted
 
-<img src="Pasted%20image%2020250226031346.png" width="300">
+<img src="Pasted%20image%2020250226031346.png" width="500">
 
 #### Worst-case time complexity
 
@@ -107,7 +107,7 @@ func selection_sort(array: Array[Int]) {
 3. Select the next element in the unsorted portion of the array
 4. Repeat step 2 to step 3 until the array is completely sorted
 
-<img src="images/Pasted%20image%2020250226022041.png" width="300">
+<img src="images/Pasted%20image%2020250226022041.png" width="500">
 
 #### Worst-case time complexity
 
@@ -146,7 +146,7 @@ func insertion_sort(array: Array[Int]) {
 2. Merge adjacent subarrays in a way that maintains sorted order, comparing elements from each subarray
 3. Continue merging larger and larger subarrays until the entire array is sorted
 
-<img src="Pasted%20image%2020250303032958.png%7C500.md" width="300">
+<img src="images/Pasted%20image%2020250303032958.png" width="300">
 
 #### Worst-case time complexity
 
