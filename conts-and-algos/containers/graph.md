@@ -2,7 +2,7 @@
 
 ## Terminology
 
-#### Basic terminology
+#### Basics
 
 - Graph: a pair $G = (V, E)$ where $V$ is a set of nodes, called vertices and $E \subseteq V \times V$ is a collection of pairs of vertices, called edges
 - Directed edge: an ordered pair of vertices $(u, v)$, where the first vertex $u$ is the origin and second vertex $v$ is the destination, denoted $u \to v$
@@ -25,10 +25,11 @@
 - Subgraph: a graph whose vertices and edges are subsets of the vertices and edges of a larger graph
 - Spanning subgraph: a subgraph of some graph $G$ that contains all the vertices of $G$
 - Connected components: the maximal connected subgraphs of a larger graph that isn't connected
+- Tree: an undirected connected acyclic graph
 - Forest: an undirected acyclic graph, where each of its connected components is a tree
 - Spanning tree: a spanning subgraph that is a tree
 
-#### Vertices and edges terminology
+#### Vertices and edges
 
 - Endpoint of an edge: two vertices at the extremity of some edge (e.g. $U$ and $V$ are the endpoints of $a$)
 - Edges incident on a vertex: edges coming out of a common vertex (e.g. $a$, $b$, and $d$ are incident on $V$)
@@ -43,23 +44,23 @@
 
 <img src="images/Pasted%20image%2020250318002242.png" width="300">
 
-#### Path terminology
+#### Paths
+
 - Path: a sequence of adjacent vertices $(v_1 , v_2, \dots, v_k)$ such that $(v_i, v_{i + 1})$ is an edge
 - Simple path: path such that all its vertices are distinct (e.g. $P_1 = (V, X, Z)$ is a simple path, but not $P_2 = (U, W, X, Y, W, V)$)
 - Path length: the number of edges in the path, or equivalently, number of vertices in the path minus one
 
 <img src="images/Pasted%20image%2020250318003131.png" width="300">
 
-#### Cycle terminology
+#### Cycles
 
 - Cycle: a path that starts and ends at the same vertex
 - Simple cycle: a cycle where each vertex is distinct (e.g. $C_1 = (V, X, Y, W, U, V)$ is a simple cycle, but not $C_2 = (U, W, X, Y, W, V, U)$)
 
 <img src="images/Pasted%20image%2020250318003316.png" width="300">
 
-### Tree terminology
+#### Trees
 
-- Tree: an undirected connected acyclic graph
 - Free tree: a tree with no designated root node
 - Rooted tree: a tree in which one vertex has been designated the root
 - Subtree: a smaller tree entirely contained within a larger tree, with a node from the original tree serving as its root, and including all its descendants
@@ -74,11 +75,12 @@
 - Depth/level of a node: the number of edges from the root to the node
 - Height of a node: the number of edges from the node to the deepest leaf
 - Height of a tree: the height of the root node
-- $m$-ary tree: a rooted tree where every node has at most $m$ children
+- $n$-ary tree: a rooted tree where every node has at most $n$ children
 - Binary tree: a rooted tree for which every node has at most two child nodes
 - Binary search tree: a binary tree which satisfy the BST invariant, which states that for every node $x$, all nodes to the left of $x$ must have a key less than $x$'s key, while all nodes to the right must have a key greater than $x$'s key
 - Full tree: a rooted tree in which each node has exactly $0$ or $N$ children
 - Complete tree: a rooted tree for which all the levels are filled, with the possible exception of the last level, which is filled from left to right
+- Perfect $n$-ary tree: an $n$-ary tree tree in which all internal nodes have exactly $n$ children and all leaf nodes are at the same level
 
 ## Properties
 
@@ -125,7 +127,7 @@
 
 ## Operations
 
-| Operation                                          | Description                                                            |
+| Operation                                              | Description                                                                 |
 | ------------------------------------------------------ | --------------------------------------------------------------------------- |
 | `func get_vertices() -> ArrayList[V]`                  | Retrieves all the vertices present in the graph.                            |
 | `func get_edges() -> ArrayList[E]`                     | Retrieves all the edges present in the graph.                               |
