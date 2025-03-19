@@ -2,14 +2,16 @@
 
 ## Terminology
 
-**Basic terminology**
+#### Basic terminology
+
 - Graph: a pair $G = (V, E)$ where $V$ is a set of nodes, called vertices and $E \subseteq V \times V$ is a collection of pairs of vertices, called edges
 - Directed edge: an ordered pair of vertices $(u, v)$, where the first vertex $u$ is the origin and second vertex $v$ is the destination, denoted $u \to v$
 - Undirected edge: an unordered pair of vertices $(u, v)$ i.e. for all $v$, $(u, v) = (v, u)$
 - Unweighted edge: an edge which has no associated real number
 - Weighted edge: an edge that has an associated real number $k \in \mathbb{R}$, given by a weight function $w: E \to \mathbb{R}$
 
-**Types of graphs**
+#### Types of graphs
+
 - Undirected graph: a graph where all edges are undirected, and contains no self-loops and no parallel edges
 - Directed graph (a.k.a digraph): a graph where all edges are directed, and may contain self-loops
 - Acyclic graph: a directed graph that has no directed cycles
@@ -26,7 +28,8 @@
 - Forest: an undirected acyclic graph, where each of its connected components is a tree
 - Spanning tree: a spanning subgraph that is a tree
 
-**Vertices and edges terminology**
+#### Vertices and edges terminology
+
 - Endpoint of an edge: two vertices at the extremity of some edge (e.g. $U$ and $V$ are the endpoints of $a$)
 - Edges incident on a vertex: edges coming out of a common vertex (e.g. $a$, $b$, and $d$ are incident on $V$)
 - Adjacent vertices: vertices connected by an edge (e.g. $U$ and $V$ are adjacent)
@@ -37,19 +40,25 @@
 - Out-degree: number of edges directed away from a vertex, denoted $out(u)$
 - Parallel edges: edges which have the same endpoints (e.g. $h$ and $i$ are parallel edges)
 - Self-loop: an edge that connects a vertex to itself (e.g. $j$ is a self-loop)
-![](images/Pasted%20image%2020250318002242.png)
 
-**Path terminology**
+<img src="images/Pasted%20image%2020250318002242.png" width="300">
+
+#### Path terminology
 - Path: a sequence of adjacent vertices $(v_1 , v_2, \dots, v_k)$ such that $(v_i, v_{i + 1})$ is an edge
 - Simple path: path such that all its vertices are distinct (e.g. $P_1 = (V, X, Z)$ is a simple path, but not $P_2 = (U, W, X, Y, W, V)$)
 - Path length: the number of edges in the path, or equivalently, number of vertices in the path minus one
-![](images/Pasted%20image%2020250318003131.png)
-**Cycle terminology**
+
+<img src="images/Pasted%20image%2020250318003131.png" width="300">
+
+#### Cycle terminology
+
 - Cycle: a path that starts and ends at the same vertex
 - Simple cycle: a cycle where each vertex is distinct (e.g. $C_1 = (V, X, Y, W, U, V)$ is a simple cycle, but not $C_2 = (U, W, X, Y, W, V, U)$)
-![](images/Pasted%20image%2020250318003316.png)
 
-**Tree terminology**
+<img src="images/Pasted%20image%2020250318003316.png" width="300">
+
+### Tree terminology
+
 - Tree: an undirected connected acyclic graph
 - Free tree: a tree with no designated root node
 - Rooted tree: a tree in which one vertex has been designated the root
@@ -73,30 +82,38 @@
 
 ## Properties
 
-> **Proposition (sum of degrees)**
+> #### Proposition (sum of degrees)
 >
 > If $G = (V, E)$ is a graph, then
+> 
 > $$
 > \sum_{v \in V} deg(v) =2|E|
 > $$
+> 
 
-> **Proposition (in and out degrees count)**
+> #### Proposition (in and out degrees count)
 >
 > If $G = (V, E)$ is a directed graph, then
+> 
 > $$
 > \sum_{v \in V} in(v) = \sum_{v \in V} out(v) = |E|
 > $$
+> 
 
-> **Proposition (maximum edge count)**
+> #### Proposition (maximum edge count)
 >
 > For an undirected graph, the following holds
+> 
 > $$
 > |E| \le \frac{|V|(|V| - 1)}{2}
 > $$
+> 
 > and for a directed graph, the following holds
+> 
 > $$
 >|E| \le |V|(|V| - 1)
 > $$
+> 
 > $\therefore |E| = O(|V|^2)$
 
 > **Proposition (edge count of undirected graphs)**
@@ -120,21 +137,18 @@
 | `func remove_vertex(vertex: V)`                        | Removes the specified vertex and all associated edges from the graph.       |
 | `func remove_edge(vertex_1: V, vertex_2: V)`           | Removes the edge between `vertex_1` and `vertex_2` from the graph.          |
 
-> [!note]
-> Getting and setting vertex value and/or edge weight is allowed
-
 ## Adjacency list
 
-![](images/Pasted%20image%2020250318004431.png)
+<img src="images/Pasted%20image%2020250318004431.png" width="500">
 
 > [!note]
 > For a weighted graph, store the weights alongside the vertices in the list
 
 ### Worst case complexities
 
-**Worst case time complexity**
+#### Worst case time complexity
 
-| **Operation**                      | **Worst case time complexity** |
+| Operation                      | Worst case time complexity |
 | ---------------------------------- | ------------------------------ |
 | Get all vertices                   | $O(V)$                         |
 | Get all edges                      | $O(V + E)$                     |
@@ -146,32 +160,35 @@
 | Deletion (vertex)                  | $O(\|V\| + \|E\|)$             |
 | Deletion (edge)                    | $O(V)$                         |
 
-**Worst case space complexity**
+#### Worst case space complexity
 
 $O(|V| + |E|)$
 
-### Search
+### Retrieval
 
-
-**Check if there's an edge**
+#### Check if there's an edge
 
 Search through the associated list of `vertex1` for `vertex2`. If `vertex2` is found, return `True`, otherwise, return `False`.
 
 ### Insertion
 
-**Vertex insertion**
+#### Vertex insertion
 
 Create a new entry in the hash table, where the key is the vertex, and the value is an empty list (either an array list or a linked list).
 
-**Edge insertion**
+#### Edge insertion
 
 For two vertices, `vertex1` and `vertex2`, add `vertex2` to the associated list of `vertex1`'s entry, and add `vertex1` to the associated list of `vertex2's` entry
 
+TO DO
+
 ### Deletion
+
+TO DO
 
 ## Adjacency matrix
 
-![](images/Pasted%20image%2020250318004446.png)
+<img src="images/Pasted%20image%2020250318004446.png" width="300">
 
 > [!note]
 > $A = A^T$ for undirected graphs
@@ -181,9 +198,9 @@ For two vertices, `vertex1` and `vertex2`, add `vertex2` to the associated list 
 
 ### Worst case complexities
 
-**Worst case time complexity**
+#### Worst case time complexity
 
-| **Operation**                          | **Worst case time complexity** |
+| Operation                          | Worst case time complexity |
 | -------------------------------------- | ------------------------------ |
 | `get_vertices()`                       | $O(V)$                         |
 | `get_edges()`                          | $O(\|V\|^2)$                   |
@@ -195,25 +212,27 @@ For two vertices, `vertex1` and `vertex2`, add `vertex2` to the associated list 
 | `remove_vertex(vertex)`                | $O(\|V\|^2)$                   |
 | `remove_edge(vertex_1, vertex_2)`      | $O(1)$                         |
 
-**Worst case space complexity**
+#### Worst case space complexity
 
 $O(|V|^2)$
 
-### Search
+### Retrieval
+
+TO DO
 
 ### Insertion
 
-**Edge insertion**
+#### Edge insertion
 
 Set `adjacency_matrix[i][j]` to `1`.
 
 ### Deletion
 
-**Edge deletion**
+#### Edge deletion
 
 Set `adjacency_matrix[i][j]` to `0`
 
-> [!tip] When to use adjacency list vs adjacency matrix
+> [!tip]
 >
 > - Choose adjacency lists if:
 > 	- You frequently need to add/remove vertices
