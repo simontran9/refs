@@ -4,17 +4,7 @@ https://www.cs.mcgill.ca/~jeromew/teachings/251/F2022/COMP251_Lecture4_F2022.pdf
 
 ## Tree traversing problem
 
-### Description
-
-Given a root node of a rooted tree, traverse the the rooted tree in a pre-order, in-order, post-order, or level-order fashion.
-
-### Input
-
-The root node of the rooted tree, `root`.
-
-### Output
-
-None specified.
+Given a root node of a rooted tree, `root`, traverse the the rooted tree in a pre-order, in-order, post-order, or level-order fashion.
 
 ## Tree depth-first search (pre-order,  in-order,  post-order) algorithm
 
@@ -183,24 +173,15 @@ func iterative_bfs(root: BinaryTreeNode[K]) {
 
 ## Graph traversing problem
 
-### Description
-
-Given a graph and source node of a graph, traverse thes graph beginning at the source node.
-
-### Input
-
-- A graph, `graph`
-- A source node of the graph, `source`
-
-### Output
-
-None specified.
+Given a graph, `graph`, and a source node of `graph`, `source`, traverse `graph` beginning at the `source`.
 
 ## Graph depth-first search
 
 ### Idea
 
 <img src="images/Pasted%20image%2020250318064132.png" width="300">
+
+TO DO
 
 ### Computational complexity
 
@@ -254,6 +235,8 @@ func recursive_dfs(graph: AdjacencyListGraph[V, E], vertex: V, visited: HashSet[
 ### Idea
 
 <img src="images/Pasted%20image%2020250318064110.png" width="300">
+
+TO DO
 
 ### Computational complexity
 
