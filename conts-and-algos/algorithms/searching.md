@@ -2,21 +2,13 @@
 
 ## Problem
 
-### Description
-
-Given an array `array` and a target element `target`, determine if `target` exists in array. If it does, return its index; otherwise, return `-1`.
-
-### Input
-
-- An array `array` of elements
-- A target element `target` to search for
-
-### Output
-
-- The index of target in `array` if found
-- `-1` if target is not present in array
+Given an array of elements, `array` and a target element, `target`, determine if `target` exists in `array`. If it does, return its index; otherwise, return `-1`.
 
 ## Linear search
+
+### Idea
+
+TO DO
 
 ### Computational complexity
 
@@ -43,6 +35,10 @@ func linear_search(array: Array[Int], target: Int) -> Int {
 ```
 
 ## Binary search
+
+### Idea
+
+TO DO
 
 ### Computational complexity
 
