@@ -125,7 +125,7 @@
 
 ## Operations
 
-| **Operation**                                          | **Description**                                                             |
+| Operation                                          | Description                                                            |
 | ------------------------------------------------------ | --------------------------------------------------------------------------- |
 | `func get_vertices() -> ArrayList[V]`                  | Retrieves all the vertices present in the graph.                            |
 | `func get_edges() -> ArrayList[E]`                     | Retrieves all the edges present in the graph.                               |
@@ -144,11 +144,11 @@
 > [!note]
 > For a weighted graph, store the weights alongside the vertices in the list
 
-### Worst case complexities
+### Computational complexities
 
-#### Worst case time complexity
+#### Time complexity
 
-| Operation                      | Worst case time complexity |
+| Operation                      | Worst-case |
 | ---------------------------------- | ------------------------------ |
 | Get all vertices                   | $O(V)$                         |
 | Get all edges                      | $O(V + E)$                     |
@@ -160,9 +160,9 @@
 | Deletion (vertex)                  | $O(\|V\| + \|E\|)$             |
 | Deletion (edge)                    | $O(V)$                         |
 
-#### Worst case space complexity
+#### Space complexity
 
-$O(|V| + |E|)$
+Worst-case: $O(|V| + |E|)$
 
 ### Retrieval
 
@@ -196,11 +196,11 @@ TO DO
 > [!note]
 > For a weighted graph, store the weights instead of bits.
 
-### Worst case complexities
+### Computational complexity
 
-#### Worst case time complexity
+#### Time complexity
 
-| Operation                          | Worst case time complexity |
+| Operation                          | Worst-case |
 | -------------------------------------- | ------------------------------ |
 | `get_vertices()`                       | $O(V)$                         |
 | `get_edges()`                          | $O(\|V\|^2)$                   |
@@ -212,9 +212,9 @@ TO DO
 | `remove_vertex(vertex)`                | $O(\|V\|^2)$                   |
 | `remove_edge(vertex_1, vertex_2)`      | $O(1)$                         |
 
-#### Worst case space complexity
+#### Space complexity
 
-$O(|V|^2)$
+Worst-case: $O(|V|^2)$
 
 ### Retrieval
 
