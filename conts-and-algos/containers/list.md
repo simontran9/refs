@@ -2,12 +2,12 @@
 
 ## Operations
 
-## Dynamic array
+## Dynamic array container
 
-## Singly linked list
+## Singly linked list container
 
-![500](images/Pasted%20image%2020250314070445.png)
+<img src="images/Pasted%20image%2020250314070445.png" width="300">
 
-## Doubly linked list
+## Doubly linked list container
 
-![500](images/Pasted%20image%2020250314070500.png)
+<img src="images/Pasted%20image%2020250314070500.png" width="300">
