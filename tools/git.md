@@ -1,8 +1,10 @@
 # `git`
 
-https://beej.us/guide/bggit/
+- https://jwiegley.github.io/git-from-the-bottom-up/
 
-https://www.atlassian.com/git
+- https://beej.us/guide/bggit/
 
-https://wizardzines.com/git-cheat-sheet.pdf
+- https://www.atlassian.com/git
+
+- https://wizardzines.com/git-cheat-sheet.pdf
 
