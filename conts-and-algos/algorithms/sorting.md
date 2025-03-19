@@ -2,18 +2,7 @@
 
 ## Problem
 
-### Description
-
-Given an array of elements, `array`, sort it in non-decreasing order.
-
-### Input
-
-An array of elements, `array`.
-
-### Output
-
-- If the sorting is in-place, return nothing, but rather, the original array should be modified so that its elements are sorted in non-decreasing order.
-- If the sorting is not in-place, return a new array that is a sorted version of original array, leaving the original unchanged.
+Given an array of elements, `array`, sort it in ascending order.
 
 ## Bubble sort
 
