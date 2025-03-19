@@ -18,7 +18,7 @@
 | `func replace_key(e: E, k: K)`   | Replaces the key of existing element `e` with `k`.           |
 | `func replace_value(e: E, v: V)` | Replaces the value of existing element `e` with `v`.         |
 
-## Binary heap
+## Binary heap container
 
 ### Definition
 
