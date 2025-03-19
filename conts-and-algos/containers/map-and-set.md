@@ -18,9 +18,9 @@
 | `func add(element: E) -> Bool`      | If the set does not already contain element `e`, adds `e` and returns `True`; otherwise returns `False`. |
 | `func remove(element: E)`           | Removes element `e` from the set.                                                                        |
 
-## Hash table
+## Hash table container
 
-### Search
+### Retrieval
 
 ### Insertion
 
@@ -28,7 +28,7 @@
 
 ## Trie
 
-### Search
+### Retrieval
 
 ### Insertion
 
