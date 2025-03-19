@@ -41,20 +41,20 @@ Heaps are typically stored in dynamic arrays, thanks to *Eytzinger*'s layout, wh
 > [!note]
 > Index $0$ is not used.
 
-### Complexities
+### Computational complexity
 
-#### Worst-case time complexity
+#### Time complexity
 
-| **Operation** | **worst-case time complexity** |
+| **Operation** | **Worst-case** |
 | ------------- | ------------------------------ |
 | Build heap    | $O(n)$                         |
 | Lookup        | $O(1)$                         |
 | Insertion     | $O(\log n)$                    |
 | Deletion      | $O(\log n)$                    |
 
-#### Worst-case space complexity
+#### Space complexity
 
-$O(n)$
+Worst-case: $O(n)$
 
 ### Node sifting mechanisms
 
