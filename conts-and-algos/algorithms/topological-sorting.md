@@ -21,10 +21,12 @@ The topological sort of `dag`
 
 ## Kahn's algorithm
 
-**Idea**
+### Idea
 
-**Time complexity**
+### Computational complexity
 
-**Space complexity**
+#### Time complexity
 
-## Depth-first search based topological sorting algorithm
+#### Space complexity
+
+## Depth-first search and SLL algorithm
