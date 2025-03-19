@@ -43,16 +43,16 @@ Heaps are typically stored in dynamic arrays, thanks to *Eytzinger*'s layout, wh
 
 ### Complexities
 
-#### Worst case time complexity
+#### Worst-case time complexity
 
-| **Operation** | **Worst case time complexity** |
+| **Operation** | **worst-case time complexity** |
 | ------------- | ------------------------------ |
 | Build heap    | $O(n)$                         |
 | Lookup        | $O(1)$                         |
 | Insertion     | $O(\log n)$                    |
 | Deletion      | $O(\log n)$                    |
 
-#### Worst case space complexity
+#### Worst-case space complexity
 
 $O(n)$
 
@@ -72,7 +72,7 @@ For some node, we repeatedly sift the node down when its key is greater than one
 
 ### Building a heap from initial elements
 
-To build a heap from initial elements of a list in $O(n)$ worst case, we build in a bottom-up manner as follows:
+To build a heap from initial elements of a list in $O(n)$ worst-case, we build in a bottom-up manner as follows:
 1. Copy over all elements in the original list into the backing array
 2. Beginning at the parent of the last element in the backing array, and repeatedly call the heapify down method
 
