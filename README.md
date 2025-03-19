@@ -67,8 +67,9 @@ Personal developer references
 - `hyperfine`
 - `perf`
 
+## Credits
 
-
+Credits to all the authors of the resources I have used to write these references.
 
 
 
