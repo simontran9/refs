@@ -137,7 +137,7 @@
 | `func remove_vertex(vertex: V)`                        | Removes the specified vertex and all associated edges from the graph.       |
 | `func remove_edge(vertex_1: V, vertex_2: V)`           | Removes the edge between `vertex_1` and `vertex_2` from the graph.          |
 
-## Adjacency list
+## Adjacency list container
 
 <img src="images/Pasted%20image%2020250318004431.png" width="500">
 
@@ -186,7 +186,7 @@ TO DO
 
 TO DO
 
-## Adjacency matrix
+## Adjacency matrix container
 
 <img src="images/Pasted%20image%2020250318004446.png" width="300">
 
