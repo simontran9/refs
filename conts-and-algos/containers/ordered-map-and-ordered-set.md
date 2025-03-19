@@ -11,13 +11,19 @@
 
 ## AVL tree
 
-### Time complexity
+### Computational complexity
 
-| **Operation** | **Time complexity**    |
+#### Time complexity
+
+| **Operation** | **Worst-case**    |
 | ------------- | ---------------------- |
-| Lookup        | Worst-case $O(n)$      |
-| Insertion     | Worst-case $O(\log n)$ |
-| Deletion      | Worst-case $O(\log n)$ |
+| Retrieval        |  $O(n)$      |
+| Insertion     |  $O(\log n)$ |
+| Deletion      |  $O(\log n)$ |
+
+#### Space complexity
+
+Worst-case: $O(n)$
 
 ## Red-black tree
 
@@ -34,14 +40,24 @@ TO DO
 > [!note]
 > When calculating the black height, remember that there are implicit `nil` leaf nodes which are always coloured black.
 
-### Time complexity
+### Computational complexity
 
-| **Operation** | **Time complexity**    |
+#### Time complexity
+
+| **Operation** | **Worst-case**    |
 | ------------- | ---------------------- |
-| Lookup        | Worst-case $O(n)$      |
-| Insertion     | Worst-case $O(\log n)$ |
-| Deletion      | Worst-case $O(\log n)$ |
-### Search
+| Retrieval        |  $O(n)$      |
+| Insertion     |  $O(\log n)$ |
+| Deletion      |  $O(\log n)$ |
+
+#### Space complexity
+
+Worst-case: $O(n)$
+
+### Retrieval
+
+TO DO
+
 ### Insertion
 
 Suppose our inserted node is called `z`, and its uncle node is called `y`. We'll call `z`'s parent and grandparent as is.
@@ -128,17 +144,19 @@ However, the root node has no lower bound for the key count or children count, b
 > [!note]
 > We can call a specific B-Tree with some minimum degree $t$ as a $t$ - $2t$ tree, (e.g. a B-tree with minimum degree of $2$ is called a $2$-$3$-$4$ tree)
 
-### Worst case complexities
+### Computational complexity
 
-| Operation | Worst case time complexity    |
+#### Time complexity
+
+| **Operation** | **Worst-case**    |
 | ------------- | ---------------------- |
-| Retrieval        | $O(n)$      |
-| Insertion     | $O(\log n)$ |
-| Deletion      | $O(\log n)$ |
+| Retrieval        |  $O(n)$      |
+| Insertion     |  $O(\log n)$ |
+| Deletion      |  $O(\log n)$ |
 
-#### Worst case space complexity
+#### Space complexity
 
-$O(n)$
+Worst-case: $O(n)$
 
 ### Retrieval
 
