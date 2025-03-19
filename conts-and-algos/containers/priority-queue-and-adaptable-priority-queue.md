@@ -1,10 +1,10 @@
-# Priority queue and index/adaptable priority queue
+# Priority queue and adaptable priority queue
 
 ## Operations
 
 ### Priority queue
 
-| **Operation**            | **Description**                                                                  |
+| Operation           | Description                                                                  |
 | ------------------------ | -------------------------------------------------------------------------------- |
 | `func top() -> E`        | Returns the element with the top priority without removing it.                   |
 | `func add(element: E)`   | Adds an element to the priority queue.                                           |
@@ -12,7 +12,7 @@
 
 ### Adaptable priority queue
 
-| **Extended operation**           | **Description**                                              |
+| Extended operation           | Description                                             |
 | -------------------------------- | ------------------------------------------------------------ |
 | `func remove(e: E) -> E`         | Removes and returns the element `e` from the priority queue. |
 | `func replace_key(e: E, k: K)`   | Replaces the key of existing element `e` with `k`.           |
@@ -25,7 +25,8 @@
 A binary heap is a binary tree with the following two properties:
 1. Complete property: All the levels of a heap are completely filled, except (possibly) for the last level. The filled items in the last level are left-justified.
 2. Heap-order property: For any node $i$, the key of the key of parent of $i$ is larger than or equal to key of $i$ if it's a max heap, and the key of parent of $i$ is less than or equal to key of $i$ if it's a min heap.
-![300](images/Pasted%20image%2020250313094732.png)
+
+<img src="images/Pasted%20image%2020250313094732.png" width="300">
 
 ### Storing heaps
 
@@ -35,14 +36,14 @@ Heaps are typically stored in dynamic arrays, thanks to *Eytzinger*'s layout, wh
 - the right child of node $i$ is node $2i + 1$
 - the parent of node $i$ is node $\lfloor \frac{i}{2} \rfloor$
 
-![](images/Pasted%20image%2020250305000853.png)
+<img src="images/Pasted%20image%2020250305000853.png" width="500">
 
 > [!note]
 > Index $0$ is not used.
 
 ### Complexities
 
-**Worst case time complexity**
+#### Worst case time complexity
 
 | **Operation** | **Worst case time complexity** |
 | ------------- | ------------------------------ |
@@ -51,17 +52,23 @@ Heaps are typically stored in dynamic arrays, thanks to *Eytzinger*'s layout, wh
 | Insertion     | $O(\log n)$                    |
 | Deletion      | $O(\log n)$                    |
 
-**Worst case space complexity**
+#### Worst case space complexity
+
 $O(n)$
+
 ### Node sifting mechanisms
 
-**Heapify up/sift up/bubble up**
+#### Heapify up/sift up/bubble up 
+
 For some node, we repeatedly sift the node up if the node's key is less than its parent's key (min-heap) or if the node's key is greater than its parent's key (max-heap) by swapping positions with its parent.
-![300](images/Pasted%20image%2020250313094956.png)
-**Heapify down/sift down/bubble down**
+
+<img src="images/Pasted%20image%2020250313094956.png" width="200">
+
+#### Heapify down/sift down/bubble down
+
 For some node, we repeatedly sift the node down when its key is greater than one of its children's key by swapping it with the smallest children (min-heap) or when its key is less than one of its children's key by swapping it with the largest children (max-heap).
 
-![300](images/Pasted%20image%2020250313095008.png)
+<img src="images/Pasted%20image%2020250313095008.png" width="200">
 
 ### Building a heap from initial elements
 
