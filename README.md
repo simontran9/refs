@@ -1,6 +1,6 @@
 # refs
 
-Personal developer references
+personal developer references
 
 ## Table of contents
 
