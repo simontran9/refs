@@ -2,26 +2,34 @@
 
 ## Problem
 
-**Description**
+### Description
+
 Given an array `array` and a target element `target`, determine if `target` exists in array. If it does, return its index; otherwise, return `-1`.
 
-**Input**
+### Input
+
 - An array `array` of elements
 - A target element `target` to search for
 
-**Output:**
+### Output
+
 - The index of target in `array` if found
 - `-1` if target is not present in array
 
 ## Linear search
 
-**Worst-case time complexity**
-Worst-case $O(n)$
+### Computational complexity
 
-**Worst-case space complexity**
-$O(1)$
+#### Time complexity
 
-**Pseudocode**
+Worst-case: $O(n)$
+
+#### Space complexity
+
+Worst-case: $O(1)$
+
+### Pseudocode
+
 ```
 func linear_search(array: Array[Int], target: Int) -> Int {
     for i in 0..array.len() {
@@ -36,14 +44,21 @@ func linear_search(array: Array[Int], target: Int) -> Int {
 
 ## Binary search
 
-**Worst-case time complexity**
-$O(\log n)$
+### Computational complexity
 
-**Worst-case space complexity**
-- Iterative: $O(1)$ 
-- Recursive: $O(\log n)$
+#### Time complexity
 
-**Pseudocode**
+Worst-case: $O(\log n)$
+
+#### Space complexity
+
+- Worst-case (iterative): $O(1)$ 
+- Worst-case (recursive): $O(\log n)$
+
+### Pseudocode
+
+#### Pseudocode (iterative)
+
 ```
 func iterative_binary_search(array: Array[Int], target: Int) -> Int {
     var low: Int = 0;
@@ -63,6 +78,8 @@ func iterative_binary_search(array: Array[Int], target: Int) -> Int {
     return -1;
 }
 ```
+
+#### Pseudocode (recursive)
 
 ```
 func recursive_binary_search(array: Array[Int], low: Int, high: Int, target: Int) -> Int {
