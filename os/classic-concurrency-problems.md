@@ -1,6 +1,12 @@
-# concurrency patterns
+# Classic concurrency problems
 
 ## Producer-consumer/bounded-buffer problem
+
+### Description
+
+TO DO
+
+### Anatomy
 
 - The conditional variable is used to notify the consumer that there are items in the buffer to process
 - The predicate expression is necessary to "save" the signal, Otherwise, if all consumer threads are busy processing when the producer adds a new item and signals, the signal will be missed and forgotten, and when the consumer threads are done their work, they will be incorrectly waiting, despite their being more items to process.
@@ -32,3 +38,5 @@ consumer() {
     pthread_mutex_unlock(&mutex);
 }
 ```
+
+## Dining philosopher's problem
