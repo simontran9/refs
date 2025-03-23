@@ -2,82 +2,25 @@
 
 personal developer notes
 
-## Table of contents
+## Installation
 
-### Containers and algorithms
+### Dependencies
 
-#### Analysis of algorithms
+- [Rust compiler](https://www.rust-lang.org/tools/install)
+- [mdbook](https://rust-lang.github.io/mdBook/guide/installation.html)
 
-- [Asymptotic analysis](conts-and-algos/analysis-of-algorithms/asymptotic-analysis.md)
-- Amortized analysis
+### Steps
 
-#### Containers
-
-- List ADT
-- Stack ADT
-- Queue ADT
-- [Priority queue and adaptable priority queue ADT](conts-and-algos/containers/priority-queue-and-adaptable-priority-queue.md)
-- Map and set ADT
-- Ordered map and ordered set ADT
-- Disjoint set ADT
-- [Graph ADT](conts-and-algos/containers/graph.md)
-
-#### Algorithms
-
-- [Searching problem](conts-and-algos/algorithms/searching.md)
-- [Sorting problem](conts-and-algos/algorithms/sorting.md)
-- Tree and graph traversing problem
-- Topological sorting problem
-- Strongly connected components problem
-- Minimum spanning tree problem
-- Maximum flow problem
-- Shortest path problem
-- Stable matching problem
-- Data compression problem
-- String matching problem
-
-#### Algorithm paradigms
-
-- Backtracking
-- Divide-and-conquer
-- Greedy algorithms
-- Dynamic programming
-
-### Operating systems
-
-#### Process management
-
-#### Process synchronization
-
-#### Memory management
-
-#### Storage management
-
-#### File systems
-
-#### Security and protection
-
-### Tools
-
-- [C language](https://beej.us/guide/bgc/), [Rust language](https://doc.rust-lang.org/book/)
-- [Linux environment](tools/linux-environment.pdf)
-- `git`
-- `make`
-- GitHub actions
-- `hyperfine`
-- `perf`
+```sh
+git clone git@github.com:simontran9/notes.git
+cd notes
+mdbook serve
+```
 
 ## Credits
 
 Credits to all the authors of the resources I have used to write these references.
 
+## LICENSE
 
-
-
-
-
-
-
-
-
-
+[MIT](https://opensource.org/license/mit)
