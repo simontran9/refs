@@ -20,7 +20,7 @@ TO DO
 pthread_mutex_t mutex = PTHREAD_MUTEX_INITIALIZER;
 pthread_cond_t cond_var = PTHREAD_COND_INITIALIZER;
 
-producer() {
+func producer() {
     pthread_mutex_lock(&mutex);
     // Change shared state
     predicate_expression = true;
@@ -28,7 +28,7 @@ producer() {
     pthread_mutex_unlock(&mutex);
 }
 
-consumer() {
+func consumer() {
     pthread_mutex_lock(&mutex);
     while (!predicate_expression) {
         pthread_cond_wait(&cond, &mutex);
