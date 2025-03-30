@@ -17,6 +17,12 @@ Given the root node of a rooted tree, `root`, traverse the the rooted tree in a 
 4. Recursively process the right subtree
 5. Continue until all nodes in the tree have been visited
 
+<img src="./images/image-2.png" width="500">
+
+<img src="./images/image.png" width="500">
+
+<img src="./images/image-1.png" width="500">
+
 ### Computational complexity
 
 #### Time complexity
@@ -150,6 +156,8 @@ func iterative_dfs(root: BinaryTreeNode[K]) {
    - a. Dequeue a node and visit it
    - b. Enqueue all of the node's children (first left, then right)
 4. Continue until the queue is empty and all nodes have been visited
+
+<img src="./images/image-3.png" width="500">
 
 ### Computational complexity
 
