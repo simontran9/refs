@@ -197,7 +197,7 @@ func iterative_bfs(root: BinaryTreeNode[K]) {
 
 Given a graph, `graph`, and a source node of `graph`, `source`, traverse `graph` beginning at the `source`.
 
-## Graph depth-first search
+## Graph depth-first search algorithm
 
 ### Idea
 
@@ -259,7 +259,7 @@ func recursive_dfs(graph: AdjacencyListGraph[V, E], vertex: V, visited: HashSet[
 }
 ```
 
-## Graph breadth-first search
+## Graph breadth-first search algorithm
 
 ### Idea
 

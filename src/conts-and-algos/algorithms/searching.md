@@ -4,7 +4,7 @@
 
 Given an array of elements, `array` and a target element, `target`, determine if `target` exists in `array`. If it does, return its index; otherwise, return `-1`.
 
-## Linear search
+## Linear search algorithm
 
 ### Idea
 
@@ -57,7 +57,7 @@ func rec_linear_search(array: Array[Int], target: Int, i: Int) -> Int {
 }
 ```
 
-## Binary search
+## Binary search algorithm
 
 ### Idea
 
