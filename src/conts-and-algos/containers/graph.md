@@ -87,38 +87,38 @@
 > #### Proposition (sum of degrees)
 >
 > If $G = (V, E)$ is a graph, then
-> 
+>
 > $$
 > \sum_{v \in V} deg(v) =2|E|
 > $$
-> 
+>
 
 > #### Proposition (in and out degrees count)
 >
 > If $G = (V, E)$ is a directed graph, then
-> 
+>
 > $$
 > \sum_{v \in V} in(v) = \sum_{v \in V} out(v) = |E|
 > $$
-> 
+>
 
 > #### Proposition (maximum edge count)
 >
 > For an undirected graph, the following holds
-> 
+>
 > $$
 > |E| \le \frac{|V|(|V| - 1)}{2}
 > $$
-> 
+>
 > and for a directed graph, the following holds
-> 
+>
 > $$
 >|E| \le |V|(|V| - 1)
 > $$
-> 
+>
 > $\therefore |E| = O(|V|^2)$
 
-> **Proposition (edge count of undirected graphs)**
+> #### Proposition (edge count of undirected graphs)
 >
 > If a graph $G$ is an undirected graph, and
 > - if $G$ is connected, then $|E| ≥ |V| - 1$

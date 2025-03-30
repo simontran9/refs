@@ -9,15 +9,15 @@
     - [List ADT]()
     - [Stack ADT]()
     - [Queue ADT]()
-    - [Priority queue and adaptable priority queue ADT](conts-and-algos/containers/priority-queue-and-adaptable-priority-queue.md)
+    - [Priority queue and adaptable priority queue ADT]()
     - [Map and set ADT]()
     - [Ordered map and ordered set ADT]()
     - [Disjoint set ADT]()
-    - [Graph ADT](conts-and-algos/containers/graph.md)
+    - [Graph ADT]()
 - [Algorithms]()
     - [Searching problem](./conts-and-algos/algorithms/searching.md)
     - [Sorting problem](./conts-and-algos/algorithms/sorting.md)
-    - [Tree and graph traversing problem]()
+    - [Tree and graph traversing problem](./conts-and-algos/algorithms/tree-and-graph-traversing.md)
     - [Topological sorting problem]()
     - [Strongly connected components problem]()
     - [Minimum spanning tree problem]()
@@ -41,12 +41,13 @@
 - [File systems]()
 - [Security and protection]()
 
+# Performance Engineering
+
 # Tools
 
-- [C language]()
 - [Linux environment]()
 - [git]()
-- [make]()
+- [GNU make]()
 - [GitHub actions]()
 - [hyperfine]()
 - [perf]()

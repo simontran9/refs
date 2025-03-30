@@ -8,15 +8,15 @@ Given an array of elements, `array`, sort it in ascending order.
 
 ### Idea
 
-1. Begin at the first element
+1. Begin at the first element of `array`
 2. Continuously swap two adjacent elements so the smaller element is before the larger element
-3. Repeat step 1 to step 2 until the array is completely sorted
+3. Repeat steps 1 to 2 until `array` is completely sorted
 
-<img src="images/Pasted%20image%2020250303030750.png" width="500">
+<img src="images/Pasted%20image%2020250303030750.png" width="400">
 
 ### Computational complexity
 
-#### Time complexity 
+#### Time complexity
 
 Worst-case: $O(n^2)$
 
@@ -42,7 +42,7 @@ func bubble_sort(array: Array[Int]) {
             }
         }
         if !swapped {
-            break; 
+            break;
         }
     }
 }
@@ -52,15 +52,15 @@ func bubble_sort(array: Array[Int]) {
 
 ### Idea
 
-1. Go through the array to find the smallest element
-2. Move the smallest element to the front of the unsorted portion of the array
-3. Repeat step 1 and step 2 until the array is completely sorted
+1. Go through `array` to find the smallest element
+2. Move the smallest element to the front of the unsorted portion of `array`
+3. Repeat steps 1 to 2 until `array` is completely sorted
 
 <img src="images/Pasted%20image%2020250226031346.png" width="300">
 
 ### Computational complexity
 
-#### Time complexity 
+#### Time complexity
 
 Worst-case: $O(n^2)$
 
@@ -95,16 +95,16 @@ func selection_sort(array: Array[Int]) {
 
 ### Idea
 
-1. Start with the second element
+1. Start with the second element of `array`
 2. Compare the current element with the previous elements in the sorted portion and insert it into the correct position in the sorted portion
-3. Select the next element in the unsorted portion of the array
-4. Repeat step 2 to step 3 until the array is completely sorted
+3. Select the next element in the unsorted portion of `array`
+4. Repeat steps 2 to 3 until `array` is completely sorted
 
 <img src="images/Pasted%20image%2020250226022041.png" width="500">
 
 ### Computational complexity
 
-#### Time complexity 
+#### Time complexity
 
 Worst-case: $O(n^2)$
 
@@ -137,15 +137,15 @@ func insertion_sort(array: Array[Int]) {
 
 ### Idea
 
-1. Repeatedly split the array in half until you have subarrays containing single elements (these are inherently sorted)
+1. Repeatedly split `array` in half until you have subarrays containing single elements (these are inherently sorted)
 2. Merge adjacent subarrays in a way that maintains sorted order, comparing elements from each subarray
-3. Continue merging larger and larger subarrays until the entire array is sorted
+3. Continue merging larger and larger subarrays until `array` is sorted
 
 <img src="images/Pasted%20image%2020250303032958.png" width="300">
 
 ### Computational complexity
 
-#### Time complexity 
+#### Time complexity
 
 Worst-case: $O(n \log n)$
 
@@ -162,8 +162,8 @@ Worst-case: $O(1)$
 
 ```
 func merge_sort(array: Array[Int]) -> Array[Int] {
-    if array.len() <= 1 { 
-        return array; 
+    if array.len() <= 1 {
+        return array;
     }
 
     const mid: Int = array.len() / 2;
@@ -195,7 +195,7 @@ func merge(left: Array[Int], right: Array[Int]) -> Array[Int] {
         merged.add_last(left[left_index]);
         left_index += 1;
     }
-    
+
     while right_index < right.len() {
         merged.add_last(right[right_index]);
         right_index += 1;
@@ -250,10 +250,10 @@ func merge(left: Array[Int], right: Array[Int]) -> Array[Int] {
 > - Elements less than or equal to the pivot go to its left
 > - Elements greater than the pivot go to its right
 > - The pivot is in its final sorted position
-> 
+>
 > While Hoare's partition scheme will partition the array such that:
-> - Elements less than or equal to the pivot are in the left partition (`array[low...j]`)
-> - Elements greater than or equal to the pivot are in the right partition (`array[j + 1...high]`)
+> - Elements less than or equal to the pivot are in the left partition (`array[low..=j]`)
+> - Elements greater than or equal to the pivot are in the right partition (`array[j + 1..=high]`)
 > - The pivot element itself could be in either partition
 > - The pivot is *not* guaranteed to be in its final sorted position
 > - The partitioning index `j` is returned, which acts as the boundary between partitions
@@ -263,7 +263,7 @@ func merge(left: Array[Int], right: Array[Int]) -> Array[Int] {
 
 ### Computational complexity
 
-#### Time complexity 
+#### Time complexity
 
 - Worst-case: $O(n^2)$
 - Average-case: $O(n \log n)$
@@ -278,7 +278,7 @@ func merge(left: Array[Int], right: Array[Int]) -> Array[Int] {
 - Not stable
 - In-place
 
-### Pseudocode 
+### Pseudocode
 
 #### Pseudocode (randomized quick sort with Lomuto's partition scheme)
 
@@ -286,7 +286,7 @@ func merge(left: Array[Int], right: Array[Int]) -> Array[Int] {
 import random;
 
 func quick_sort(array: Array[Int], low: Int, high: Int) {
-    if low < high { 
+    if low < high {
         const pi: Int = lomuto_partition(array, low, high);
         quick_sort(array, low, pi - 1);
         quick_sort(array, pi + 1, high);
@@ -335,22 +335,22 @@ func hoare_partition(array: Array[Int], low: Int, high: Int) -> Int {
     const pivot: Int = hoare_pivot_selection(array, low, high);
     var i: Int = low - 1;
     var j: Int = high + 1;
-    
+
     while True {
         i += 1;
         while i < high and array[i] < pivot {
             i += 1;
         }
-        
+
         j -= 1;
         while j > low and array[j] > pivot {
             j -= 1;
         }
-        
+
         if i >= j {
             return j;
         }
-        
+
         array.swap(i, j);
     }
 }
@@ -366,11 +366,11 @@ func hoare_pivot_selection(array: Array[Int], low: Int, high: Int) -> Int {
 
 ### Idea
 
-1. Build a max heap from the input array
-2. Select the last slot from the unsorted portion of the array
+1. Build a max heap from the input `array`
+2. Select the last slot from the unsorted portion of `array`
 3. Change the element in the last slot to the top element in the heap
 4. Remove the top element from the heap
-5. Repeat step 2 and step 4 until the array is completely sorted
+5. Repeat steps 2 to 4 until `array` is completely sorted
 
 <img src="images/Pasted%20image%2020250226053913.png" width="300">
 <img src="images/Pasted%20image%2020250226054010.png" width="300">
@@ -378,7 +378,7 @@ func hoare_pivot_selection(array: Array[Int], low: Int, high: Int) -> Int {
 <img src="images/Pasted%20image%2020250226054034.png" width="300">
 <img src="images/Pasted%20image%2020250226054047.png" width="300">
 
-### Computational complexity 
+### Computational complexity
 
 #### Time complexity
 

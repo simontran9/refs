@@ -1,14 +1,21 @@
 # Tree and graph traversing
 
-https://www.cs.mcgill.ca/~jeromew/teachings/251/F2022/COMP251_Lecture4_F2022.pdf
-
 ## Tree traversing problem
 
-Given a root node of a rooted tree, `root`, traverse the the rooted tree in a pre-order, in-order, post-order, or level-order fashion.
+Given the root node of a rooted tree, `root`, traverse the the rooted tree in a pre-order, in-order, post-order, or level-order fashion.
 
-## Tree depth-first search (pre-order,  in-order,  post-order) algorithm
+## Tree depth-first search (pre-order, in-order, post-order) algorithm
 
 ### Idea
+
+1. Start at the `root` node of the tree
+2. For each node, decide when to "visit" it based on the traversal type:
+   - Pre-order: Visit the current node before exploring its children
+   - In-order: Visit the current node between exploring its left and right children
+   - Post-order: Visit the current node after exploring all its children
+3. Recursively process the left subtree
+4. Recursively process the right subtree
+5. Continue until all nodes in the tree have been visited
 
 ### Computational complexity
 
@@ -27,7 +34,7 @@ Worst-case: $O(n)$
 ```
 func recursive_dfs(root: BinaryTreeNode[K]) {
     if root == None {
-        return; 
+        return;
     }
     // visit e.g. println("{}", root.key);
     recursive_dfs(root.left);
@@ -37,8 +44,8 @@ func recursive_dfs(root: BinaryTreeNode[K]) {
 
 ```
 func iterative_dfs(root: BinaryTreeNode[K]) {
-    if root == None { 
-        return; 
+    if root == None {
+        return;
     }
 
     var stack: ArrayStack[BinaryTreeNode[K]] = ArrayStack[BinaryTreeNode[K]]::new();
@@ -60,8 +67,8 @@ func iterative_dfs(root: BinaryTreeNode[K]) {
 
 ```
 func recursive_dfs(root: BinaryTreeNode[K]) {
-    if root == None { 
-        return; 
+    if root == None {
+        return;
     }
     recursive_dfs(root.left);
     // visit e.g. println("{}", root.key);
@@ -71,8 +78,8 @@ func recursive_dfs(root: BinaryTreeNode[K]) {
 
 ```
 func iterative_dfs(root: BinaryTreeNode[K]) {
-    if root == None { 
-        return; 
+    if root == None {
+        return;
     }
 
     var stack: ArrayStack[BinaryTreeNode[K]] = ArrayStack[BinaryTreeNode[K]]::new();
@@ -95,7 +102,7 @@ func iterative_dfs(root: BinaryTreeNode[K]) {
 
 ```
 func recursive_dfs(root: BinaryTreeNode[K]) {
-    if root == None { 
+    if root == None {
         return;
     }
     recursive_dfs(root.left);
@@ -106,8 +113,8 @@ func recursive_dfs(root: BinaryTreeNode[K]) {
 
 ```
 func iterative_dfs(root: BinaryTreeNode[K]) {
-    if root == None { 
-        return; 
+    if root == None {
+        return;
     }
 
     var stack: ArrayStack[BinaryTreeNode[K]] = ArrayStack[BinaryTreeNode[K]]::new();
@@ -137,6 +144,13 @@ func iterative_dfs(root: BinaryTreeNode[K]) {
 
 ### Idea
 
+1. Start at the `root` node of the tree
+2. Create a queue and enqueue the `root` node
+3. While the queue is not empty:
+   - a. Dequeue a node and visit it
+   - b. Enqueue all of the node's children (first left, then right)
+4. Continue until the queue is empty and all nodes have been visited
+
 ### Computational complexity
 
 #### Time complexity
@@ -151,21 +165,21 @@ Worst-case: $O(n)$
 
 ```
 func iterative_bfs(root: BinaryTreeNode[K]) {
-    if root == None { 
-        return; 
+    if root == None {
+        return;
     }
-    
+
     queue: ArrayQueue[BinaryTreeNode[K]] = ArrayQueue[BinaryTreeNode[K]]::new();
     queue.enqueue(root);
 
     while !queue.is_empty() {
         var current: BinaryTreeNode[K] = queue.dequeue();
         // visit e.g. println("{}", current.key);
-        if current.left != None { 
-            queue.enqueue(current.left); 
+        if current.left != None {
+            queue.enqueue(current.left);
         }
-        if current.right != None { 
-            queue.enqueue(current.right); 
+        if current.right != None {
+            queue.enqueue(current.right);
         }
     }
 }
@@ -179,9 +193,15 @@ Given a graph, `graph`, and a source node of `graph`, `source`, traverse `graph`
 
 ### Idea
 
-<img src="images/Pasted%20image%2020250318064132.png" width="300">
+1. Create a container (typically a set) to keep track of visited nodes
+2. Start at `source` and mark it as visited
+3. For each unvisited neighbor of the current vertex:
+    - a. Recursively apply the depth-first search on that neighbor
+    - b. Mark the neighbor as visited
+4. Backtrack when a vertex has no unvisited neighbors
+5. Continue until all reachable vertices from `source` have been visited
 
-TO DO
+<img src="images/Pasted%20image%2020250318064132.png" width="300">
 
 ### Computational complexity
 
@@ -201,9 +221,10 @@ Worst-case: $O(V)$
 func iterative_dfs(graph: AdjacencyListGraph[V, E], source: V) {
     var visited: HashSet[V] = HashSet[V]::new();
     var stack: ArrayStack[V] = ArrayStack[V]::new();
-    
+
     stack.push(source);
-    
+    visited.add(source);
+
     while !stack.is_empty() {
         var vertex: V = stack.pop();
         if !visited.contains(vertex) {
@@ -234,9 +255,13 @@ func recursive_dfs(graph: AdjacencyListGraph[V, E], vertex: V, visited: HashSet[
 
 ### Idea
 
-<img src="images/Pasted%20image%2020250318064110.png" width="300">
+1. Start at the source vertex `source`
+2. Explore all the neighbors of `source`
+3. Then explore all the unvisited neighbors of the neighbors of `source`
+4. Then explore all the unvisited neighbors of the neighbors of the neighbors of `source`
+5. Repeat until no more unvisited vertices remain
 
-TO DO
+<img src="images/Pasted%20image%2020250318064110.png" width="300">
 
 ### Computational complexity
 
@@ -254,10 +279,10 @@ Worst-case: $O(V)$
 func iterative_bfs(graph: AdjacencyListGraph[V, E], source: V) {
     var visited: HashSet[V] = HashSet[V]::new();
     var queue: ArrayQueue[V] = ArrayQueue[V]::new();
-    
+
     queue.enqueue(source);
     visited.add(source);
-    
+
     while !queue.is_empty() {
         var vertex: V = queue.dequeue();
         for neighbor in graph.get_neighbors(vertex) {
