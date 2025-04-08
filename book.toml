@@ -1,9 +1,0 @@
-[book]
-authors = ["Simon Tran"]
-language = "en"
-multilingual = false
-src = "src"
-title = "notes"
-
-[output.html]
-mathjax-support = true

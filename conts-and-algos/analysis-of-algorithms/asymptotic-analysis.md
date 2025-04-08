@@ -3,7 +3,7 @@
 ## Bachmann-Landau notation
 
 > #### Definition (big O)
-> 
+>
 > Let $f(n)$ and $g(n)$ be functions mapping positive integers to positive real numbers.
 > We say that $f(n)$ is $O(g(n))$ if there is a real constant $c \gt 0$ and an integer constant
 > $n_0 \ge 1$ such that
@@ -11,7 +11,7 @@
 > $$
 > f(n) \leq c \cdot g(n), \text{ for } n \geq n_0
 > $$
-> 
+>
 
 #### Simplification rules
 
@@ -33,7 +33,7 @@ In $T_{case}(n) = f(n) \in O(g(n))$, $g(n)$ is one of the following:
 | Exponential  | $2^n$      |
 | Factorial    | $n!$       |
 
-## Worst case time complexity 
+## Worst case time complexity
 
 ### Iterative algorithms
 
@@ -52,42 +52,42 @@ The following primitive operations take $O(1)$:
 
 #### Complexity of loops
 
-The complexity of a loop is expressed as the sum of the complexities of each iteration of the loop. Whenever there's nested loops, begin by calculating the innermost loop and proceed outwards, which will give nested summations. 
+The complexity of a loop is expressed as the sum of the complexities of each iteration of the loop. Whenever there's nested loops, begin by calculating the innermost loop and proceed outwards, which will give nested summations.
 
 Some useful summation properties and formulas:
 
 > #### Property (Big-O and summation)
-> 
+>
 > $$
 > \sum_{i \in I} O(f(i)) = O\left(\sum_{i \in I} f(i)\right)
 > $$
 
 > #### Property (summation of a constant)
-> 
+>
 > $$
 > \sum_{i = m}^{n} ca_i = c \sum_{i = m}^{n} a_i
 > $$
 
 > #### Property (addition and subtraction of summations)
-> 
+>
 > $$
 > \sum_{i = m}^{n} (a_i \pm b_i) = \sum_{i = m}^{n} a_i \pm \sum_{i = m}^{n} b_i
 > $$
 
 > #### Formula (summation of a $1$)
-> 
+>
 > $$
 > \sum_{i = m}^{n} 1 = n - m + 1
 > $$
 
 > #### Formula (summation of arithmetic series)
-> 
+>
 > $$
 > \sum_{i = 1}^{n} i = \frac{n(n + 1)}{2}
 > $$
 
 > #### Formula (summation of quadratic series)
-> 
+>
 > $$
 > \sum_{i = 1}^{n} i^2 = \frac{n(n + 1)(2n + 1)}{6}
 > $$
@@ -99,7 +99,7 @@ Some useful summation properties and formulas:
 > $$
 
 > #### Formula (summation of $i^k$ series)
-> 
+>
 > $$
 > \sum_{i = 1}^{n} i^k \approx \frac{1}{k + 1}n^{k + 1}
 > $$
@@ -130,7 +130,7 @@ Some useful summation properties and formulas:
 
 $$
 T(n)= aT(\frac{n}{b})+f(n)
-$$   
+$$
 
    - $T(n)$: Time complexity for input size $n$
    - $a$: Number of recursive calls
@@ -156,6 +156,6 @@ $$
 
 2. Apply Bachmann-Landau notation simplification rules
 
-> [!note]
+> [!WARNING]
 > Do not count the algorithm's input.
 

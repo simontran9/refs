@@ -2,22 +2,54 @@
 
 indexed fragments of my computer science knowledge
 
-## Installation
+## Containers and algorithms
 
-### Dependencies
+- [Analysis of algorithms]()
+    - [Asymptotic analysis](./conts-and-algos/analysis-of-algorithms/asymptotic-analysis.md)
+    - [Amortized analysis]()
+- [Containers]()
+    - [List ADT]()
+    - [Stack ADT]()
+    - [Queue ADT]()
+    - [Priority queue and adaptable priority queue ADT]()
+    - [Map and set ADT]()
+    - [Ordered map and ordered set ADT]()
+    - [Disjoint set ADT]()
+    - [Graph ADT]()
+- [Algorithms]()
+    - [Searching problem](./conts-and-algos/algorithms/searching.md)
+    - [Sorting problem](./conts-and-algos/algorithms/sorting.md)
+    - [Tree and graph traversing problem](./conts-and-algos/algorithms/tree-and-graph-traversing.md)
+    - [Topological sorting problem]()
+    - [Strongly connected components problem]()
+    - [Minimum spanning tree problem]()
+    - [Maximum flow problem]()
+    - [Shortest path problem]()
+    - [Stable matching problem]()
+    - [Data compression problem]()
+    - [String matching problem]()
+- [Algorithm paradigms]()
+    - [Backtracking]()
+    - [Divide-and-conquer]()
+    - [Greedy algorithms]()
+    - [Dynamic programming]()
 
-- [Rust compiler](https://www.rust-lang.org/tools/install)
-- [mdbook](https://rust-lang.github.io/mdBook/guide/installation.html)
+## Operating systems
 
-### Steps
+- [Process management]()
+- [Process synchronization]()
+- [Memory management]()
+- [Storage management]()
+- [File systems]()
+- [Security and protection]()
 
-```
-git clone git@github.com:simontran9/notes.git
-cd notes
-```
+## Performance Engineering
 
-## Usage
+## Tools
 
-```
-mdbook serve --watcher poll
-```
+- [Linux environment]()
+- [git]()
+- [GNU make]()
+- [GitHub actions]()
+- [hyperfine]()
+- [perf]()
